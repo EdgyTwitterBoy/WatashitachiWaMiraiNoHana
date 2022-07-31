@@ -12,39 +12,6 @@ using System.Linq;
 
 namespace StorybrewScripts
 {
-    public class Part
-    {
-        public int StartTime;
-        public int EndTime;
-        public string Mapper;
-        public Action Action;
-
-        public Part(int startTime, int endTime, string mapper, Action action)
-        {
-            StartTime = startTime;
-            EndTime = endTime;
-            Mapper = mapper;
-            Action = action;
-
-            Action();
-        }
-
-        public Part(int startTime, int endTime, string mapper)
-        {
-            StartTime = startTime;
-            EndTime = endTime;
-            Mapper = mapper;
-            Action = DefaultAction;
-
-            Action();
-        }
-
-        private void DefaultAction()
-        {
-            // Do nothing
-        }
-    }
-
     public abstract class StoryboardObjectGeneratorPlus : StoryboardObjectGenerator
     {
         protected static int Width = 1980;

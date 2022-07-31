@@ -3,4 +3,4 @@
 .sbrew.bak
 .cache
 .vs
-.sbrew/
+bin/

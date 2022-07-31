@@ -1,0 +1,119 @@
+﻿FormatVersion: 7
+Name: "CurrentMapper 1"
+Script: "CurrentMapper"
+Config:
+  RandomSeed:
+    Type: "System.Int32"
+    Value: "0"
+    DisplayName: "Random seed"
+Layers:
+  d8a872f02f604cc49ae1e5660907dce9:
+    Name: "1 - MakiDonalds"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  40c9749b00a240f99bef65260a6e86eb:
+    Name: "2 - zesteas"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  9f899e9b75f94e689f6febf79fb0cb0d:
+    Name: "3 - Kyairie"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  052d2f8491ac4b31a8cabc5363cf015e:
+    Name: "4 - murada"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  7970ac96638e4952885c6cd1e5c7ad8d:
+    Name: "5 - CutoNaito"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  99eabfee02cd43f5bc22f084a8439ab6:
+    Name: "6 - laplus"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  cd7ce6d10df54e959ee6e5bf6d452e22:
+    Name: "7 - Cxk"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  8120c4f5f1e24816ac2da352d66b8eb5:
+    Name: "8 - Paradogi"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  6f1f893a994849dba690fc0e8e35b323:
+    Name: "9 - 0ppInOsu"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  88f2cfbb794d4cfd93d5f61545ddf74b:
+    Name: "10 - zesteas"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  896c24c1f7fd485cbb92125ccf87a890:
+    Name: "11 - laplus"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  b5b7eae6e2b3420eb3b67bfc55f36df2:
+    Name: "12 - MakiDonalds"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  fdae68c52823497f90b9802da7ebc722:
+    Name: "13 - Cxk"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  ead20b61882f4949b890a8d2bda7eedd:
+    Name: "14 - Rielle"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  9a2dfb5bcffb4dc495aa013c17b5747c:
+    Name: "15 - Slifer"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  a9647eb6794443dda85220530f2c19e6:
+    Name: "16 - Halgoh"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  0e8db711f79b4441b87ef7712e88a43c:
+    Name: "17 - Murada"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  9c753894ce334dcdb2d7a38231e40b79:
+    Name: "18 - 0ppInOsu"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  d8b95320e6794d6696e0e971f8cbdc2a:
+    Name: "19 - Rielle"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  89b7c5c8918542c1acf5a69697ae0fd8:
+    Name: "21 - Kyairie"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  93cc671d2ab24365a20bd861af938c58:
+    Name: "20 - CutoNaito"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  2ddd349471e540119b9bf5eb29771012:
+    Name: "22 - Slifer"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes

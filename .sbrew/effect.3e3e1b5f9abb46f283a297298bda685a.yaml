@@ -1,0 +1,64 @@
+﻿FormatVersion: 7
+Name: "HalfBGs 1"
+Script: "HalfBGs"
+Config:
+  RandomSeed:
+    Type: "System.Int32"
+    Value: "0"
+    DisplayName: "Random seed"
+Layers:
+  09254123cebd464396a76f5f440c1901:
+    Name: "HalfLayers"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  ed6097a051834470b00a5f1a45eab74f:
+    Name: "HalfBG 9"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  51022d91b12b486fa1d351b02b9a784b:
+    Name: "HalfBG 8"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  3439e2c1a64f495ebf8ec0a60edf5a7a:
+    Name: "HalfBG 7"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  5bda4da96a374523b60adefb9218d401:
+    Name: "HalfBG 6"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  4ddd30de14f9407183da8d83050f2989:
+    Name: "HalfBG 5"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  d8ef456cd48245388b3b127480ba7f1c:
+    Name: "HalfBG 4"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  c460288357c346748acbf2a790d3b936:
+    Name: "HalfBG 3"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  812a9352852f4ce68908ca6705262ad9:
+    Name: "HalfBG 2"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  69164aa4c0574fdf816eb7319462456b:
+    Name: "HalfBG 1"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  c531402667bc48aa9ec382e347631e4b:
+    Name: "HalfBG 0"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes

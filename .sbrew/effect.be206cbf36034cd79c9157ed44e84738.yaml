@@ -1,0 +1,32 @@
+﻿FormatVersion: 7
+Name: "Soshite 1"
+Script: "Soshite"
+Config:
+  times:
+    Type: "System.String"
+    Value: "6770,7225,7680,8589,9952,10407,10861,11316,12225,12680,13134"
+  letterOffset:
+    Type: "OpenTK.Vector2"
+    Value: "50,0"
+  startPosition:
+    Type: "OpenTK.Vector2"
+    Value: "97.5,230"
+  startOffset:
+    Type: "System.Double"
+    Value: "15"
+  endTime:
+    Type: "System.Double"
+    Value: "15599"
+  letterScale:
+    Type: "System.Double"
+    Value: "0.7"
+  RandomSeed:
+    Type: "System.Int32"
+    Value: "0"
+    DisplayName: "Random seed"
+Layers:
+  64285597af044895a1de40fe931f9e8d:
+    Name: "Soshite"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
