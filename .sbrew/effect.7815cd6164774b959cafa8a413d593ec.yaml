@@ -62,18 +62,8 @@ Layers:
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes
-  b5b7eae6e2b3420eb3b67bfc55f36df2:
-    Name: "12 - MakiDonalds"
-    OsbLayer: Background
-    DiffSpecific: No
-    Visible: Yes
   fdae68c52823497f90b9802da7ebc722:
     Name: "13 - Cxk"
-    OsbLayer: Background
-    DiffSpecific: No
-    Visible: Yes
-  ead20b61882f4949b890a8d2bda7eedd:
-    Name: "14 - Rielle"
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes
@@ -114,6 +104,16 @@ Layers:
     Visible: Yes
   2ddd349471e540119b9bf5eb29771012:
     Name: "22 - Slifer"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  1aa7fc6a79ad455fae0b6cddf77e7170:
+    Name: "12 - Rielle"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
+  198d4799a29045999e3c6acef1dccb04:
+    Name: "14 - MakiDonalds"
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes

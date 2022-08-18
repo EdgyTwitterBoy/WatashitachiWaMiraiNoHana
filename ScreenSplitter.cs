@@ -18,7 +18,6 @@ namespace StorybrewScripts
         [Configurable]public float rightPosition;
 
         private bool isLeft = true;
-        private int[] changeTimes = {44942, 71172, 92319, 113139, 134122, 160352, 191991, 226090, 257565};
         public override void Generate()
         {
 		    var layer = GetLayer("ScreenSplitter");
@@ -27,7 +26,7 @@ namespace StorybrewScripts
             splitter.Fade(21500, 270680, 1, 1);
             splitter.MoveX(21500, leftPosition);
 
-            foreach (var time in changeTimes)
+            foreach (var time in ChangeTimes)
             {
                 ChangeSpot(splitter, time);
             }

@@ -52,11 +52,14 @@
   </Target>
   -->
   <ItemGroup>
-    <Compile Include="Background.cs" />
     <Compile Include="BlackBG.cs" />
     <Compile Include="CurrentMapper.cs" />
+    <Compile Include="CustomParticles.cs" />
     <Compile Include="HalfBGs.cs" />
     <Compile Include="IntroInfo.cs" />
+    <Compile Include="Kiai1Transparent.cs" />
+    <Compile Include="LyricsPart.cs" />
+    <Compile Include="PreKiaiOne.cs" />
     <Compile Include="ScreenSplitter.cs" />
     <Compile Include="Soshite.cs" />
     <Compile Include="UmiRotate.cs" />

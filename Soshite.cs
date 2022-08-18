@@ -38,7 +38,6 @@ namespace StorybrewScripts
 
         public override void Generate()
         {
-            //Soshite watashitachi wa meguriau...
 		    var layer = GetLayer("Soshite");
             int[] times = GetTimes();
             List<Letter> letters = new List<Letter>();
