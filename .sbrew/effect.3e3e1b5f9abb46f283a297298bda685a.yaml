@@ -12,6 +12,11 @@ Layers:
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes
+  0e93815bf652429d804cfd899f852638:
+    Name: "HalfBG 10"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes
   ed6097a051834470b00a5f1a45eab74f:
     Name: "HalfBG 9"
     OsbLayer: Background

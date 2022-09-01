@@ -28,7 +28,11 @@ namespace StorybrewScripts
         public Vector2 Scale = new Vector2(1, 1);
 
         [Configurable]
+        public bool Rotate = false;
+        [Configurable]
         public float Rotation = 0;
+        [Configurable]
+        public float RotateSpeed;
 
         [Configurable]
         public OsbOrigin Origin = OsbOrigin.Centre;
@@ -96,6 +100,8 @@ namespace StorybrewScripts
                 var startTime = StartTime + (i * loopDuration) / ParticleCount;
                 var endTime = startTime + loopDuration * loopCount;
 
+                
+
                 if (!isVisible(bitmap, startPosition, endPosition, (float)spriteRotation, (float)loopDuration))
                     continue;
 
@@ -118,6 +124,10 @@ namespace StorybrewScripts
                 }
 
                 var particle = layer.CreateSprite(Path, Origin);
+                particle.Fade(EndTime, 0);
+                particle.Fade(StartTime, color.A);
+                if(Rotate)
+                    spriteRotation = MathHelper.DegreesToRadians(Random(0, 360));
                 if (spriteRotation != 0)
                     particle.Rotate(startTime, spriteRotation);
                 if (color.R != 1 || color.G != 1 || color.B != 1)
@@ -132,9 +142,8 @@ namespace StorybrewScripts
                     particle.Additive(startTime, endTime);
 
                 particle.StartLoopGroup(startTime, loopCount);
-                particle.Fade(OsbEasing.Out, 0, loopDuration * 0.2, 0, color.A);
-                particle.Fade(OsbEasing.In, loopDuration * 0.8, loopDuration, color.A, 0);
                 particle.Move(Easing, 0, loopDuration, startPosition, endPosition);
+                if(Rotate) particle.Rotate(Easing, 0, loopDuration, spriteRotation, spriteRotation + MathHelper.DegreesToRadians(RotateSpeed));
                 particle.EndGroup();
             }
         }

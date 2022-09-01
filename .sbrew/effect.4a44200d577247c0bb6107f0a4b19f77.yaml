@@ -1,0 +1,14 @@
+﻿FormatVersion: 7
+Name: "Ending 1"
+Script: "Ending"
+Config:
+  RandomSeed:
+    Type: "System.Int32"
+    Value: "0"
+    DisplayName: "Random seed"
+Layers:
+  a373ea3e753249d6938857635df34aef:
+    Name: "Ending"
+    OsbLayer: Background
+    DiffSpecific: No
+    Visible: Yes

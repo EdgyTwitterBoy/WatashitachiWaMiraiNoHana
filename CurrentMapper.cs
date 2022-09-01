@@ -46,7 +46,7 @@ namespace StorybrewScripts
                                     "Cxk", "Slifer", "Halgoh", "Murada", "0ppInOsu", "Rielle", "CutoNaito", "Kyairie", "Slifer"};
             int[] partStartTimes = {6770, 21500, 34625, 44953, 60844, 71172, 81827, 92319, 102811,
                                     113139, 123795, 134122 , 144778, 160352, 171008, 191991,
-                                    204942, 215598, 226090, 236581, 246909, 257565, 270680};
+                                    204942, 215598, 226090, 236581, 246909, 257565, 271008};
 
             PartPosition[] partPositions = {PartPosition.Left, PartPosition.Left, PartPosition.Left,
                                             PartPosition.Right, PartPosition.Right,

@@ -1,31 +1,31 @@
 ﻿FormatVersion: 7
-Name: "CustomParticles 1"
+Name: "CustomParticles 2"
 Script: "CustomParticles"
 Config:
   Path:
     Type: "System.String"
-    Value: "sb/particles/glowCircle.png"
+    Value: "sb/particles/feather.png"
   StartTime:
     Type: "System.Int32"
-    Value: "91340"
+    Value: "225434"
   EndTime:
     Type: "System.Int32"
-    Value: "110680"
+    Value: "257606"
   ParticleCount:
     Type: "System.Int32"
-    Value: "64"
+    Value: "16"
   Scale:
     Type: "OpenTK.Vector2"
     Value: "1,1"
   Rotate:
     Type: "System.Boolean"
-    Value: "False"
+    Value: "True"
   Rotation:
     Type: "System.Single"
-    Value: "0"
+    Value: "10"
   RotateSpeed:
     Type: "System.Single"
-    Value: "0"
+    Value: "360"
   Origin:
     Type: "System.Int32"
     Value: "4"
@@ -41,7 +41,7 @@ Config:
       BottomRight: "8"
   Color:
     Type: "OpenTK.Graphics.Color4"
-    Value: "1,1,1,1"
+    Value: "0.4905775,0,0.7622607,0.7350315"
   ColorVariance:
     Type: "System.Single"
     Value: "0"
@@ -50,13 +50,13 @@ Config:
     Value: "False"
   SpawnOrigin:
     Type: "OpenTK.Vector2"
-    Value: "-107,480"
+    Value: "-117,-10"
   SpawnSpread:
     Type: "System.Single"
-    Value: "0"
+    Value: "20"
   Angle:
     Type: "System.Single"
-    Value: "-45"
+    Value: "45"
   AngleSpread:
     Type: "System.Single"
     Value: "90"
@@ -107,10 +107,10 @@ Config:
       InOutBounce: "34"
   RandomSeed:
     Type: "System.Int32"
-    Value: "0"
+    Value: "561"
     DisplayName: "Random seed"
 Layers:
-  35c110b11f5046329bff022e5274dbe8:
+  e1679cae0d3b465d8ab7ac31c13dd391:
     Name: "CustomParticles"
     OsbLayer: Background
     DiffSpecific: No

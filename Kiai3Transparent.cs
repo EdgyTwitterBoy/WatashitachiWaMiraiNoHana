@@ -23,6 +23,10 @@ namespace StorybrewScripts
             eight.Scale(204942, ScreenScale);
             eight.Move(204942, MaximumDimensions.X - 249.5, ScreenMiddle.Y);
             eight.Fade(204942, 226254, 1, 1);
+
+            nine.Scale(226090, ScreenScale);
+            nine.Move(226090, MinimumDimensions.X + 249.5, ScreenMiddle.Y);
+            nine.Fade(226090, 257729, 1, 1);
         }
     }
 }

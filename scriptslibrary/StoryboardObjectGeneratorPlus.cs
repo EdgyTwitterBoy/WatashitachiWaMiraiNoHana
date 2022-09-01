@@ -71,7 +71,7 @@ namespace StorybrewScripts
                                                 {235926, 241172},                   // 39 Soshite watashitachi wa katariau
                                                 {241172, 245926},                   // 40 Futatabi aeta toki wa 
                                                 {245926, 249696},                   // 41 kawaru hazu deshou?
-                                                {251172, 254942}};                  // 42 Atarashii futari ni
+                                                {251336, 255270}};                  // 42 Atarashii futari ni
     }
 
     public static class AddOns

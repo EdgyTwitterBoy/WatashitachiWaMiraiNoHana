@@ -55,6 +55,7 @@
     <Compile Include="BlackBG.cs" />
     <Compile Include="CurrentMapper.cs" />
     <Compile Include="CustomParticles.cs" />
+    <Compile Include="Ending.cs" />
     <Compile Include="GuitarPart1.cs" />
     <Compile Include="HalfBGs.cs" />
     <Compile Include="HitObjectFollow.cs" />
@@ -66,7 +67,6 @@
     <Compile Include="LyricsPart.cs" />
     <Compile Include="NewHitObjectFollow.cs" />
     <Compile Include="PreKiaiOne.cs" />
-    <Compile Include="PreKiaiTwo.cs" />
     <Compile Include="ScreenSplitter.cs" />
     <Compile Include="SlowPart.cs" />
     <Compile Include="Soshite.cs" />

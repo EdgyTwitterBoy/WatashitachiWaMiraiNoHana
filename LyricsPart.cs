@@ -29,7 +29,7 @@ namespace StorybrewScripts
             // Draw lines
             for(int i = 0; i < lines.Count; i++)
             {
-                // Check if this line needs custom handeling
+                // Check if this line needs custom handling
                 if(CheckSpecial(i)) continue;
 
                 OsbSprite line = lines[i].sprite;
@@ -113,6 +113,7 @@ namespace StorybrewScripts
                     return true;
 
                 case 42:
+                    HandleFortyTwo();
                     return true;
 
                 case 16:
@@ -141,6 +142,14 @@ namespace StorybrewScripts
 
                 case 33:
                     HandleThirtyThree();
+                    return true;
+                
+                case 40:
+                    HandleForty();
+                    return true;
+
+                case 41:
+                    HandleFortyOne();
                     return true;
 
                 default:
@@ -507,7 +516,85 @@ namespace StorybrewScripts
             // Hide line
             line.MoveY(OsbEasing.OutQuart, lines[i + 1].endTime - GetBeatDuration(Beatmap), lines[i + 1].endTime, currentPosition.Y + linesOffset, currentPosition.Y + linesOffset * 2);
             line.Fade(OsbEasing.Out, lines[i + 1].endTime - GetBeatDuration(Beatmap), lines[i + 1].endTime, 0.5, 0);
+        }
 
+        void HandleFortyTwo()
+        {
+            int i = 42;
+            OsbSprite line = lines[i].sprite;
+            int startTime = lines[i - 1].startTime;
+            int endTime = lines[i].endTime;
+
+            // Set the position of the line according to the background splitter
+            SetCurrentPos(startTime - GetBeatDuration(Beatmap));
+
+            // // Draw new line
+            line.MoveX(lines[i].startTime - GetBeatDuration(Beatmap), currentPosition.X);
+            // line.MoveY(OsbEasing.OutQuart, startTime - GetBeatDuration(Beatmap), startTime, currentPosition.Y - linesOffset * 2, currentPosition.Y - linesOffset);
+            // line.Scale(startTime, smallLinesScale * ScreenScale);
+            // line.Fade(startTime - GetBeatDuration(Beatmap), startTime, 0, 0.5);
+
+            // Make the line active
+            line.MoveY(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, currentPosition.Y - linesOffset, currentPosition.Y);
+            line.Scale(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, smallLinesScale * ScreenScale, bigLinesScale * ScreenScale);
+            line.Fade(OsbEasing.Out, lines[i].startTime - GetBeatDuration(Beatmap),lines[i].startTime, 0.5, 1);
+
+            line.Fade(254942, 257565, 1, 0);
+        }
+
+        void HandleForty()
+        {
+            int i = 40;
+            OsbSprite line = lines[i].sprite;
+            int startTime = lines[i - 1].startTime;
+            int endTime = lines[i].endTime;
+
+            // Set the position of the line according to the background splitter
+            SetCurrentPos(startTime - GetBeatDuration(Beatmap));
+
+            // Draw new line
+            line.MoveX(startTime, currentPosition.X);
+            line.MoveY(OsbEasing.OutQuart, startTime - GetBeatDuration(Beatmap), startTime, currentPosition.Y - linesOffset * 2, currentPosition.Y - linesOffset);
+            line.Scale(startTime, smallLinesScale * ScreenScale);
+            line.Fade(startTime - GetBeatDuration(Beatmap), startTime, 0, 0.5);
+
+            // Make the line active
+            line.MoveY(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, currentPosition.Y - linesOffset, currentPosition.Y);
+            line.Scale(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, smallLinesScale * ScreenScale, bigLinesScale * ScreenScale);
+            line.Fade(OsbEasing.Out, lines[i].startTime - GetBeatDuration(Beatmap),lines[i].startTime, 0.5, 1);
+
+            // Move the line down
+            line.MoveY(OsbEasing.OutQuart, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, currentPosition.Y, currentPosition.Y + linesOffset);
+            line.Scale(OsbEasing.OutQuart, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, bigLinesScale * ScreenScale, smallLinesScale * ScreenScale);
+            line.Fade(OsbEasing.Out, lines[i].endTime - GetBeatDuration(Beatmap), 245844, 1, 0.5);
+
+            line.Fade(245844, 249696, 0.5, 0.5);
+            line.Fade(249696, 250680, 0.5, 0);
+        }
+
+        void HandleFortyOne()
+        {
+            int i = 41;
+            OsbSprite line = lines[i].sprite;
+            int startTime = lines[i - 1].startTime;
+            int endTime = lines[i].endTime;
+
+            // Set the position of the line according to the background splitter
+            SetCurrentPos(startTime - GetBeatDuration(Beatmap));
+
+            // Draw new line
+            line.MoveX(startTime, currentPosition.X);
+            line.MoveY(OsbEasing.OutQuart, startTime - GetBeatDuration(Beatmap), startTime, currentPosition.Y - linesOffset * 2, currentPosition.Y - linesOffset);
+            line.Scale(startTime, smallLinesScale * ScreenScale);
+            line.Fade(startTime - GetBeatDuration(Beatmap), startTime, 0, 0.5);
+
+            // Make the line active
+            line.MoveY(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, currentPosition.Y - linesOffset, currentPosition.Y);
+            line.Scale(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, smallLinesScale * ScreenScale, bigLinesScale * ScreenScale);
+            line.Fade(OsbEasing.Out, lines[i].startTime - GetBeatDuration(Beatmap),245844, 0.5, 1);
+
+            line.Fade(245844, 249696, 1, 1);
+            line.Fade(249696, 250680, 1, 0);
         }
 
         public class LyricsLine

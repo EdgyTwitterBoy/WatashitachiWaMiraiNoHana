@@ -25,6 +25,9 @@ namespace StorybrewScripts
             int startTime2 = 191991;
             int endTime2 = 204122;
 
+            int startTime3 = 257893;
+            int endTime3 = 270680;
+
             orb.Scale(startTime, 1.5 * ScreenScale);
             orb.Color(startTime, Color4.Black);
             orb.Move(startTime, 100, 240);
@@ -34,8 +37,12 @@ namespace StorybrewScripts
 
             orb.Move(startTime2, 540, 240);
             orb.Fade(startTime2, 1);
-            orb.Fade(OsbEasing.Out, endTime2 - GetBeatDuration(Beatmap) * 2, endTime2, 1, 0);
-            orb.Rotate(startTime2, endTime2, 0, 12);
+            orb.Fade(OsbEasing.Out, endTime2 - GetBeatDuration(Beatmap), endTime2, 1, 0);
+            orb.Rotate(startTime2, endTime2, 0, -12);
+
+            orb.Move(startTime3, 100, 240);
+            orb.Fade(OsbEasing.In, startTime3, startTime3 + GetBeatDuration(Beatmap), 0, 1);
+            orb.Rotate(startTime3, endTime3, 0, 8);
         }
     }
 }
