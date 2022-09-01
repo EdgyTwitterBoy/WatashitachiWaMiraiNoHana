@@ -1,17 +1,14 @@
 ﻿FormatVersion: 7
-Name: "WhiteFlash 1"
-Script: "WhiteFlash"
+Name: "Kiai3Transparent 1"
+Script: "Kiai3Transparent"
 Config:
-  flashTimes:
-    Type: "System.String"
-    Value: "21500,71172,160352,191991"
   RandomSeed:
     Type: "System.Int32"
     Value: "0"
     DisplayName: "Random seed"
 Layers:
-  5647eeba78664522b7c25c4c2fae1000:
-    Name: "FlashWhite"
+  8cc3085de6df40bc9e0baec5297a123e:
+    Name: "Kiai3Transparent"
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes

@@ -24,20 +24,29 @@ namespace StorybrewScripts
             {113139, 134286},
             {134122, 160516},
             {160352, 192155},
-            {191991, 226254},
-            {226090, 257729},
-            {257565, 270188}
+            {191991, 205106},
+            {204942, 226254},
+            {226090, 270188}
         };
 
+        //3
         private int[] threeFlashTimesPlus = {101336, 101991, 102811, 107401, 103139};
-
         private int[] threeFastFlashTimes = {110680, 110844, 111008, 111172, 111336, 111500, 111663, 111827, 101172};
 
+        //2
         private int[] twoFlashTimes = {71172, 72483, 73795, 75106, 76581, 77729, 79204, 80352, 81827, 83139, 84450, 84942, 85434,
                                        87073, 88221, 89696, 91008, 91336};
-
         private int[] twoFastFlashTimes = {91663, 91827, 91991, 92155, 92319};
 
+        //6
+        private int[] sixFlashTimes = {160352, 161663, 162975, 164286, 165762, 166909, 168385, 169532, 171008, 172319, 173631,
+                                       174122, 174614, 176254, 177401, 178877, 180188, 180516};
+        private int[] sixFastFlashTimes = {180844, 181008, 181172, 181336};
+
+        //8
+        private int[] eightFlashTimes = {204942, 206254, 207565, 208877, 210352, 211500, 212975, 214122, 215598, 216909, 218221,
+                                         218713, 219204, 220844, 221991, 223467, 224778, 225106};
+        private int[] eightFastFlashTimes = {225434, 225598, 225762, 225926};
         private List<double> threeFlashTimes = new List<double>();
 
         public override void Generate()
@@ -105,6 +114,14 @@ namespace StorybrewScripts
                     HandleTwo(sprite, startTime, endTime);
                     break;
 
+                case 6:
+                    HandleSix(sprite, startTime, endTime);
+                    break;
+
+                case 8:
+                    HandleEight(sprite, startTime, endTime);
+                    break;
+
                 default:
                     sprite.Fade(startTime, endTime, 1, 1);
                     break;
@@ -140,6 +157,36 @@ namespace StorybrewScripts
             {
                 sprite.Flash(time, GetHalfBeatDuration(Beatmap) - 1, fastFlash, 0.5);
                 fastFlash += 0.05;
+            }
+        }
+
+        void HandleSix(OsbSprite sprite, int startTime, int endTime)
+        {
+            sprite.Fade(startTime, 0.5);
+            sprite.Rotate(startTime, endTime, 0, 0);
+            foreach (var time in sixFlashTimes)
+            {
+                sprite.Flash(time, GetBeatDuration(Beatmap) - 1, 1, 0.5); 
+            }
+
+            foreach (var time in sixFastFlashTimes)
+            {
+                sprite.Flash(time, GetHalfBeatDuration(Beatmap) - 1, 0.7, 0.5);
+            }
+        }
+
+        void HandleEight(OsbSprite sprite, int startTime, int endTime)
+        {
+            sprite.Fade(startTime, 0.5);
+            sprite.Rotate(startTime, endTime, 0, 0);
+            foreach (var time in eightFlashTimes)
+            {
+                sprite.Flash(time, GetBeatDuration(Beatmap) - 1, 1, 0.5); 
+            }
+
+            foreach (var time in eightFastFlashTimes)
+            {
+                sprite.Flash(time, GetHalfBeatDuration(Beatmap) - 1, 0.7, 0.5);
             }
         }
     }

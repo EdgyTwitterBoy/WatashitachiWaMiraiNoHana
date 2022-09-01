@@ -28,7 +28,7 @@ namespace StorybrewScripts
         protected static double DegToRad(double degrees) => degrees * 0.0174532925;
         protected static string MapPath = @"C:\Users\drevo\AppData\Local\osu!\Songs\Sonoda_Umi_CV_Mimori_Suzuko_-_Watashitachi_wa_Mirai_no_Hana";
         protected static string[] Mappers = {"0ppInOsu", "CutoNaito", "Cxk", "Halgoh", "Kyairie", "laplus", "MakiDonalds", "Murada", "Paradogi", "Rielle", "Slifer", "zesteas"};
-        public static int[] ChangeTimes = {44942, 70844, 92319, 113139, 134122, 160352, 191991, 226090, 257565};
+        public static int[] ChangeTimes = {44942, 70844, 92319, 113139, 134122, 159860, 191663, 204942, 226090, 257565};
         protected static int[,] LyricsTimes = {{34942,  40188},                     // 0 Hi ni mukaitai to negau hana
                                                 {40188,  45434},                    // 1 Kokoro ni ichirin aru deshou
                                                 {45434, 49696},                     // 2 Daiji ni shinagara sorezore o
@@ -54,14 +54,14 @@ namespace StorybrewScripts
                                                 {140516, 143795},                   // 22 tada nobiteru no
                                                 {143795, 150024},                   // 23 Kanarazu modoru to wa iwanakute wakaru
                                                 {150024, 152647},                   // 24 Genki de ite tashika na yume
-                                                {152647, 157893},                   // 25 Nee... watashi ni mo mieru!
+                                                {152647, 158221},                   // 25 Nee... watashi ni mo mieru!
                                                 {159860, 162975},                   // 26 Kimi ga fureta tsuyoi itami ni naku
                                                 {162975, 165762},                   // 27 Kinou wa mou sayonara
                                                 {165762, 170352},                   // 28 iradachi wa touku natte
                                                 {170352, 173631},                   // 29 Doko ni mukaeba ii no ka wa
                                                 {173631, 180516},                   // 30 Setsunasa ga kanjita basho ni ikimashou ka
-                                                {180516, 184122},                   // 31 Sayonara
-                                                {204450, 207565},                   // 32 Kimi yo saite atsui kibou no hate
+                                                {180516, 184778},                   // 31 Sayonara
+                                                {204122, 207565},                   // 32 Kimi yo saite atsui kibou no hate
                                                 {207565, 210352},                   // 33 Tabidatsu kono sadame yo
                                                 {210352, 214942},                   // 34 kagayaki wa kaze no kanata
                                                 {214942, 218221},                   // 35 Itsuka kotae ga michite kuru

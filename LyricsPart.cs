@@ -131,6 +131,18 @@ namespace StorybrewScripts
                     HandleNineteen();
                     return true;
 
+                case 31:
+                    HandleThirtyOne();
+                    return true;
+
+                case 32:
+                    HandleThirtyTwo();
+                    return true;
+
+                case 33:
+                    HandleThirtyThree();
+                    return true;
+
                 default:
                     return false;
             }
@@ -361,6 +373,141 @@ namespace StorybrewScripts
                 Vector2 newPos = line.PositionAt(changeTime).X == positionLeft.X ? positionRight : positionLeft;
                 line.MoveX(OsbEasing.OutExpo, changeTime, changeTime + GetBeatDuration(Beatmap), line.PositionAt(changeTime).X, newPos.X);
             }
+        }
+
+        void HandleThirtyOne()
+        {
+            int i = 31;
+            OsbSprite line = lines[i].sprite;
+            int startTime = lines[i - 1].startTime;
+            int endTime = lines[i].endTime;
+
+            // Set the position of the line according to the background splitter
+            SetCurrentPos(startTime - GetBeatDuration(Beatmap));
+
+            // Draw new line
+            line.MoveX(startTime, currentPosition.X);
+            line.MoveY(OsbEasing.OutQuart, startTime - GetBeatDuration(Beatmap), startTime, currentPosition.Y - linesOffset * 2, currentPosition.Y - linesOffset);
+            line.Scale(startTime, smallLinesScale * ScreenScale);
+            line.Fade(startTime - GetBeatDuration(Beatmap), startTime, 0, 0.5);
+
+            // Make the line active
+            line.MoveY(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, currentPosition.Y - linesOffset, currentPosition.Y);
+            line.Scale(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, smallLinesScale * ScreenScale, bigLinesScale * ScreenScale);
+            line.Fade(OsbEasing.Out, lines[i].startTime - GetBeatDuration(Beatmap),lines[i].startTime, 0.5, 1);
+
+            // Move the line down
+            line.MoveY(OsbEasing.OutQuart, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, currentPosition.Y, currentPosition.Y + linesOffset);
+            line.Scale(OsbEasing.OutQuart, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, bigLinesScale * ScreenScale, smallLinesScale * ScreenScale);
+
+            // Check for position transition
+            int changeTime = 0;
+            int changeTime2 = 204942;
+            if(CheckPosChange(startTime - GetBeatDuration(Beatmap), lines[i].endTime, out changeTime))
+            {
+                // Move the line to the new position
+                Vector2 newPos = line.PositionAt(changeTime).X == positionLeft.X ? positionRight : positionLeft;
+                line.MoveX(OsbEasing.OutExpo, changeTime, changeTime + GetBeatDuration(Beatmap), line.PositionAt(changeTime).X, newPos.X);
+            }
+
+            // Hide line
+            line.MoveY(OsbEasing.OutQuart, lines[i + 1].endTime - GetBeatDuration(Beatmap), lines[i + 1].endTime, currentPosition.Y + linesOffset, currentPosition.Y + linesOffset * 2);
+            line.Fade(OsbEasing.Out, lines[i + 1].endTime - GetBeatDuration(Beatmap), lines[i + 1].endTime, 0.5, 0);
+
+            //Custom script
+            line.Fade(184122, 0); 
+            line.Fade(204122, 204450, 0, 0.5);
+
+            Vector2 newPos2 = line.PositionAt(changeTime2).X == positionLeft.X ? positionRight : positionLeft;
+            line.MoveX(OsbEasing.OutExpo, changeTime2, changeTime2 + GetBeatDuration(Beatmap), line.PositionAt(changeTime2).X, newPos2.X);
+        }
+
+        void HandleThirtyTwo()
+        {
+            int i = 32;
+            OsbSprite line = lines[i].sprite;
+            int startTime = lines[i - 1].startTime;
+            int endTime = lines[i].endTime;
+
+            // Set the position of the line according to the background splitter
+            SetCurrentPos(startTime - GetBeatDuration(Beatmap));
+
+            // Draw new line
+            line.MoveX(startTime, currentPosition.X);
+            line.MoveY(OsbEasing.OutQuart, startTime - GetBeatDuration(Beatmap), startTime, currentPosition.Y - linesOffset * 2, currentPosition.Y - linesOffset);
+            line.Scale(startTime, smallLinesScale * ScreenScale);
+            line.Fade(startTime - GetBeatDuration(Beatmap), startTime, 0, 0.5);
+
+            // Make the line active
+            line.MoveY(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, currentPosition.Y - linesOffset, currentPosition.Y);
+            line.Scale(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, smallLinesScale * ScreenScale, bigLinesScale * ScreenScale);
+
+            // Move the line down
+            line.MoveY(OsbEasing.OutQuart, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, currentPosition.Y, currentPosition.Y + linesOffset);
+            line.Scale(OsbEasing.OutQuart, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, bigLinesScale * ScreenScale, smallLinesScale * ScreenScale);
+            line.Fade(OsbEasing.Out, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, 1, 0.5);
+
+            // Check for position transition
+            int changeTime = 0;
+            int changeTime2 = 204942;
+            if(CheckPosChange(startTime - GetBeatDuration(Beatmap), lines[i].endTime, out changeTime))
+            {
+                // Move the line to the new position
+                Vector2 newPos = line.PositionAt(changeTime).X == positionLeft.X ? positionRight : positionLeft;
+                line.MoveX(OsbEasing.OutExpo, changeTime, changeTime + GetBeatDuration(Beatmap), line.PositionAt(changeTime).X, newPos.X);
+            }
+
+            // Hide line
+            line.MoveY(OsbEasing.OutQuart, lines[i + 1].endTime - GetBeatDuration(Beatmap), lines[i + 1].endTime, currentPosition.Y + linesOffset, currentPosition.Y + linesOffset * 2);
+            line.Fade(OsbEasing.Out, lines[i + 1].endTime - GetBeatDuration(Beatmap), lines[i + 1].endTime, 0.5, 0);
+
+            //Custom script
+            line.Fade(184122, 0);
+            line.Fade(204122, 204450, 0, 1);
+            // Move the line to the new position
+            Vector2 newPos2 = line.PositionAt(changeTime2).X == positionLeft.X ? positionRight : positionLeft;
+            line.MoveX(OsbEasing.OutExpo, changeTime2, changeTime2 + GetBeatDuration(Beatmap), line.PositionAt(changeTime2).X, newPos2.X);
+        }
+
+        void HandleThirtyThree()
+        {
+            int i = 33;
+            OsbSprite line = lines[i].sprite;
+            int startTime = lines[i - 1].startTime;
+            int endTime = lines[i].endTime;
+
+            // Set the position of the line according to the background splitter
+            SetCurrentPos(startTime - GetBeatDuration(Beatmap));
+
+            // Draw new line
+            line.MoveX(startTime, currentPosition.X);
+            line.MoveY(204122, currentPosition.Y - linesOffset);
+            line.Scale(startTime, smallLinesScale * ScreenScale);
+            line.Fade(204122, 204450, 0, 0.5);
+
+            // Make the line active
+            line.MoveY(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, currentPosition.Y - linesOffset, currentPosition.Y);
+            line.Scale(OsbEasing.OutQuart, lines[i].startTime - GetBeatDuration(Beatmap), lines[i].startTime, smallLinesScale * ScreenScale, bigLinesScale * ScreenScale);
+            line.Fade(OsbEasing.Out, lines[i].startTime - GetBeatDuration(Beatmap),lines[i].startTime, 0.5, 1);
+
+            // Move the line down
+            line.MoveY(OsbEasing.OutQuart, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, currentPosition.Y, currentPosition.Y + linesOffset);
+            line.Scale(OsbEasing.OutQuart, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, bigLinesScale * ScreenScale, smallLinesScale * ScreenScale);
+            line.Fade(OsbEasing.Out, lines[i].endTime - GetBeatDuration(Beatmap), lines[i].endTime, 1, 0.5);
+
+            // Check for position transition
+            int changeTime = 0;
+            if(CheckPosChange(startTime - GetBeatDuration(Beatmap), lines[i].endTime, out changeTime))
+            {
+                // Move the line to the new position
+                Vector2 newPos = line.PositionAt(changeTime).X == positionLeft.X ? positionRight : positionLeft;
+                line.MoveX(OsbEasing.OutExpo, changeTime, changeTime + GetBeatDuration(Beatmap), line.PositionAt(changeTime).X, newPos.X);
+            }
+
+            // Hide line
+            line.MoveY(OsbEasing.OutQuart, lines[i + 1].endTime - GetBeatDuration(Beatmap), lines[i + 1].endTime, currentPosition.Y + linesOffset, currentPosition.Y + linesOffset * 2);
+            line.Fade(OsbEasing.Out, lines[i + 1].endTime - GetBeatDuration(Beatmap), lines[i + 1].endTime, 0.5, 0);
+
         }
 
         public class LyricsLine

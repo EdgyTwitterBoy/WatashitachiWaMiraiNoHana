@@ -1,17 +1,14 @@
 ﻿FormatVersion: 7
-Name: "WhiteFlash 1"
-Script: "WhiteFlash"
+Name: "GuitarPart1 1"
+Script: "GuitarPart1"
 Config:
-  flashTimes:
-    Type: "System.String"
-    Value: "21500,71172,160352,191991"
   RandomSeed:
     Type: "System.Int32"
     Value: "0"
     DisplayName: "Random seed"
 Layers:
-  5647eeba78664522b7c25c4c2fae1000:
-    Name: "FlashWhite"
+  adff2ef05f4b4e47a7b6d41c06b136dc:
+    Name: "GuitarPart1"
     OsbLayer: Background
     DiffSpecific: No
     Visible: Yes
